@@ -1,0 +1,34 @@
+{
+  "name": "Smart_Gamma_Test",
+  "version": "1.0.0",
+  "description": "Cypress Test Automation for all Smart Gamma Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run"
+  },
+  "author": "Teslenko Volodymyr",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@js-joda/core": "^3.2.0",
+    "cypress": "^9.3.1",
+    "cypress-iframe": "^1.0.1",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-chai-friendly": "^0.7.1",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-mocha": "^8.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "mailslurp": "^0.0.1-security",
+    "mailslurp-client": "^11.7.2",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-report-generator": "^5.2.0",
+    "prettier": "2.3.0",
+    "prettier-plugin-jsdoc": "^0.3.22"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.5",
+    "eslint-plugin-prettier": "^3.4.0"
+  }
+}
