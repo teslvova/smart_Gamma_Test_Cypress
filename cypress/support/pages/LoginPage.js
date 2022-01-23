@@ -8,7 +8,7 @@ export class LoginPage {
       passwordField: "[formcontrolname='password']",
       loginButton: "[type='submit']",
       signUpButton: "[ng-reflect-router-link='/sign-up']",
-      confirmPasswordField: "[ng-reflect-router-link='confirmPassword']",
+      confirmPasswordField: "[formcontrolname='confirmPassword']",
       unRegisteredUser: "#mat-error-0",
     };
   }

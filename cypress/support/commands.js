@@ -1,6 +1,10 @@
-import { loadLoginPage, fillPatientInformation } from "./commands_functions";
+import {loadLoginPage, fillUserInformation, fillNewUserInformation} from "./commands_functions";
 
 Cypress.Commands.add("loginAndSignIn", (userName, password) => {
   loadLoginPage();
-  fillPatientInformation(userName, password);
+  fillUserInformation(userName, password);
+});
+
+Cypress.Commands.add("createNewUser", (userName, password, confirmPassword) => {
+  fillNewUserInformation(userName, password, confirmPassword);
 });
