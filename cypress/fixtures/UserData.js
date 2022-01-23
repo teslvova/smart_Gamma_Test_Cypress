@@ -10,5 +10,10 @@ export class UserData extends DataGenerator {
       username: "Vova",
       password: dataGenerator.generateRandomAlphaNumeric(5),
     };
+
+    this._newUserData = {
+      username: "Vova",
+      password: dataGenerator.generateRandomAlphaNumeric(5),
+    };
   }
 }
