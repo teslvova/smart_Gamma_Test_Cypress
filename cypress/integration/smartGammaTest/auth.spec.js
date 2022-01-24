@@ -9,15 +9,13 @@ const userData = new UserData();
 let unregisteredUser = "Unregistered User";
 
 describe("Login Page", function () {
-  let title = "SmartGammaTest";
+
   beforeEach(function () {
-    cy.visit("/");
-    cy.title().should("eq", title);
+    cy.loadLoginPage();
   });
 
   it("Create a new random user", function () {
     cy.createNewUser(userData._newUserData.username, userData._newUserData.password, userData._newUserData.password);
-    accountPage.getAddButton().should("be.visible")
   });
 
   it("Sign in as Unregistered User", function () {

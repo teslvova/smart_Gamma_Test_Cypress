@@ -1,9 +1,13 @@
 import { LoginPage } from "./pages/LoginPage";
+import {AccountPage} from "./pages/AccountPage";
 
 let loginPage = new LoginPage();
+const accountPage = new AccountPage();
 
 export function loadLoginPage() {
-  cy.visit(loginPage.url);
+  let title = "SmartGammaTest";
+  cy.visit("/");
+  cy.title().should("eq", title);
 }
 
 export function fillUserInformation(userName, password) {
@@ -19,4 +23,5 @@ export function fillNewUserInformation(userName, password, confirmPassword) {
   loginPage.enterToPasswordField(password);
   loginPage.enterToConfirmPasswordField(confirmPassword);
   loginPage.clickLoginButton();
+  accountPage.getAddButton().should("be.visible")
 }

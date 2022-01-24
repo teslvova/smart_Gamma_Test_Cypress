@@ -3,7 +3,6 @@ import { DateTimeFormatter, LocalDate } from "@js-joda/core";
 /** Base Data generator. Provides common userData generation methods for the test suite. */
 export class DataGenerator {
   constructor() {
-    this.paymentCards = payment_cards;
     this.numChars = "0123456789";
     this.alphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     this.alphaNumChars = this.alphaChars + this.numChars;

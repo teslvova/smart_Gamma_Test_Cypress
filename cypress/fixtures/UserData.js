@@ -1,19 +1,17 @@
-import { DataGenerator } from "../../../cypress/common/DataGenerator";
-const dataGenerator = new DataGenerator();
+import {DataGenerator} from "../common/DataGenerator";
 
-/** Selectors and functions that are unique to the Patient Info page. */
 export class UserData extends DataGenerator {
   constructor() {
     super();
 
     this._userData = {
       username: "Vova",
-      password: dataGenerator.generateRandomAlphaNumeric(5),
+      password: this.generateRandomAlphaNumeric(5),
     };
 
     this._newUserData = {
       username: "Vova",
-      password: dataGenerator.generateRandomAlphaNumeric(5),
+      password: this.generateRandomAlphaNumeric(5),
     };
   }
 }
