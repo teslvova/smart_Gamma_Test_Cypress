@@ -6,7 +6,27 @@ export class AccountPage {
             addButton: "[ng-reflect-router-link='add']",
             iconButton: ".mat-icon",
             logOutButton: ".mat-menu-content",
+            editItem: ".mat-card-actions > [tabindex=\"0\"]",
+            deleteItem: ".mat-card-actions > :nth-child(2)",
+            descriptionOnItem: ".cut-text",
+            noDataTextSelector: "h3",
         };
+    }
+
+    getNoDataTextSelector() {
+        return cy.get(this._selectors.noDataTextSelector);
+    }
+
+    getDescriptionOnItem() {
+        return cy.get(this._selectors.descriptionOnItem);
+    }
+
+    getEditItem() {
+        return cy.get(this._selectors.editItem);
+    }
+
+    getDeleteItem() {
+        return cy.get(this._selectors.deleteItem);
     }
 
     getLogOutButton() {
@@ -23,6 +43,14 @@ export class AccountPage {
 
     clickLogOutButton() {
         return this.getLogOutButton().click();
+    }
+
+    clickEditItem() {
+        return this.getEditItem().click();
+    }
+
+    clickDeleteItem() {
+        return this.getDeleteItem().click();
     }
 
     clickAddButton() {
