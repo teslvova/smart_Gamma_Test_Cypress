@@ -3,7 +3,6 @@ import { DateTimeFormatter, LocalDate } from "@js-joda/core";
 /** Base Data generator. Provides common userData generation methods for the test suite. */
 export class DataGenerator {
   constructor() {
-    this.paymentCards = payment_cards;
     this.numChars = "0123456789";
     this.alphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     this.alphaNumChars = this.alphaChars + this.numChars;
@@ -79,10 +78,10 @@ export class DataGenerator {
   }
 
   generateRandomNumber() {
-    return Math.random() * (99999.99 - 1.0) + 1.0;
+    return Math.random() * 2;
   }
 
-  generateRandomNumberOfLength(length) {
+    generateRandomNumberOfLength(length) {
     return Math.random() * (length - 1.0) + 1.0;
   }
 
@@ -96,6 +95,10 @@ export class DataGenerator {
 
   generateRandomAlpha(length) {
     return this.generateRandomStringWithCharSet(this.alphaChars, length);
+  }
+
+  generateRandomNum(length) {
+    return this.generateRandomStringWithCharSet(this.numChars, length);
   }
 
   generateRandomPaymentUSD() {
